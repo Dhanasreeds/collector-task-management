@@ -1,0 +1,82 @@
+.menu {
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(72, 72, 126);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:5vh !;
+    padding: 0 20px; /* Optional padding for spacing */
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h4 a{
+    text-decoration: none;
+    color: white;
+    margin-right: 0;
+}
+#event{
+display:flex;
+margin:10px
+
+}
+
+#calendar{
+    margin-top: 5px;
+    width: 80%;
+    color: black;
+    display: flex;
+    height: 85vh;
+    margin-left:20px ;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.container-fluid-sm{
+    display: block;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center; 
+    font-family: Arial, sans-serif; 
+}
+
+th {
+    background-color: rgb(146, 146, 155);
+    color: white!;
+    padding: 5px;
+}
+
+td { 
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color:rgb(235, 235, 245);
+}
+a{  
+    text-align: center;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+td:hover {
+    cursor: pointer;
+}
+
+        ul {
+            list-style-type: none;
+            overflow-y: scroll;
+        }
+ul li {
+            max-height: 200px; /* Adjust the height as needed */
+            overflow-y: auto; /* Enable vertical scrolling */
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #f9f9f9;
+            margin-top: 15px;
+        }

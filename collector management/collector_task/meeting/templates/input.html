@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <title>Event Booking</title>
+    <link rel="stylesheet" href="{% static 'input.css' %}">
+  </head>
+  <body>
+    <div class="center">
+      <h1>Event & Meeting Scheduler</h1>
+
+      {% if messages %}
+          {% for message in messages %}
+              {% if message.tags == 'error' %}
+                  <center><h4 style="color: firebrick;">{{message}}</h4></center>
+              {% else %}
+                  <center><h4 style="color: dodgerblue;">{{message}}</h4></center>
+              {% endif %}
+          {% endfor %}
+      {% endif %}
+
+      <form method="POST">
+
+        {% csrf_token %}
+
+        <div class="txt_field">
+            <label>Title</label>
+            <input type="text" required name="title">
+            <span></span>
+
+          </div>
+
+          <div class="TE-field">
+               <label>Description</label>
+            <textarea type="textarea" rows="2" required name="description"></textarea><br>
+            <span></span>
+          </div>
+         <div class="txt_field">
+             <label>Venue</label>
+             <input type="text" required name="Venue">
+        </div>
+        <div class="date_field">
+            <label>Starting Date and Time</label>
+          <input type="datetime-local" required name="date_time">
+          <span></span>
+
+        </div>
+          <div class="date_field">
+            <label>Ending Date and Time</label>
+          <input type="datetime-local" required name="date_time1">
+          <span></span>
+
+        </div>
+
+           <div class="txt_field">
+            <label>Department</label>
+            <input type="text" required name="department">
+            <span></span>
+          <div class="txt_field">
+            <label>Coordinator name</label>
+            <input type="text" required name="coordinator_name">
+            <span></span>
+
+          </div>
+          </div>
+           <div class="txt_field">
+            <label>Resource Person</label>
+            <input type="text" required name="person">
+            <span></span>
+
+          </div>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+  </body>
+</html>
